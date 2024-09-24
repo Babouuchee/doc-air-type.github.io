@@ -1,22 +1,23 @@
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Air-Type - Overview</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
 </head>
 <body>
-    <div id="navbar"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="pages/Usage.html">Usage</a></li>
+            <li><a href="pages/Informations.html">Informations</a></li>
+            <li><a href="pages/Technical.html">Technical</a></li>
+            <li><a href="pages/Protocols.html">Protocols</a></li>
+            <li><a href="pages/Changelogs.html">Changelogs</a></li>
+            <li><a href="pages/About.html">About</a>
+        </ul>
+    </nav>
     <h1>Air-Type - Overview</h1>
-    <p>Documentation coming soon...</p>
-    <script>
-        function loadNavbar() {
-            fetch('../layout.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navbar').innerHTML = data;
-                })
-                .catch(error => console.error('Error while loading the navbar:',error));
-        }
-        window.onload = loadNavbar;
-    </script>
+    <p>Overview coming soon...</p>
 </body>
 </html>
