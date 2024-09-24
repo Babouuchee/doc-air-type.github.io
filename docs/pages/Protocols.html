@@ -1,0 +1,21 @@
+<html></html>
+<head>
+    <title>Air-Type - Protocols</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <h1>Air-Type - Protocols</h1>
+    <p>Documentation coming soon...</p>
+    <script>
+        function loadNavbar() {
+            fetch('../layout.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch(error => console.error('Error while loading the navbar:',error));
+        }
+        window.onload = loadNavbar;
+    </script>
+</body>
+</html>
