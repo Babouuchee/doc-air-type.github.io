@@ -26,6 +26,20 @@ nav ul li a {
     font-size: 14px;
 }
 
-h1 {
+.overview h1 {
+    text-align: center;
+}
+
+.overview {
+    width: 100%;
+    padding: 10px;
+}
+
+.overview h2 {
+    text-align: center;
+}
+
+.overview p {
+    font-size: 15px;
     text-align: center;
 }
