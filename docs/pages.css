@@ -28,6 +28,11 @@ nav ul li a {
 
 .overview h1 {
     text-align: center;
+    font-size: 28px;
+}
+
+h1 {
+    font-size: 28px;
 }
 
 .overview {
@@ -35,11 +40,112 @@ nav ul li a {
     padding: 10px;
 }
 
-.overview h2 {
+.overview p {
+    font-size: 20px;
     text-align: center;
 }
 
-.overview p {
-    font-size: 15px;
+.overview .logo {
     text-align: center;
+    padding: 10px;
+}
+
+.overview .screen {
+    text-align: center;
+    padding: 10px;
+}
+
+.overview .screen img {
+    height: auto;
+}
+
+.content {
+    width: 100%;
+    padding: 100px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.content .requirements {
+    display: flex;
+    height: 200px;
+}
+
+.content .requirements .requirements-text {
+    flex: 1;
+}
+
+.content .requirements .requirements-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.content .requirements .requirements-image img {
+    scale: 0.7;
+}
+
+.content p {
+    font-size: 20px;
+    width: 100%;
+    padding: 3px;
+    padding-left: 15px;
+    margin: 10px;
+}
+
+.content h2 {
+    font-size: 24px;
+}
+
+.content code {
+    font-size: 15px;
+    width: 100%;
+    padding: 3px;
+    padding-left: 60px;
+    margin: 10px;
+}
+
+.general-infos {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.general-infos p {
+    font-size: 20px;
+    width: 100%;
+    padding: 3px;
+    padding-left: 15px;
+    margin: 10px;
+}
+
+.history {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.history p {
+    font-size: 20px;
+    width: 100%;
+    padding: 3px;
+    padding-left: 15px;
+    margin: 10px;
+}
+
+.history-title {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.history .history-text {
+    flex: 1;
+}
+
+.history .history-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }

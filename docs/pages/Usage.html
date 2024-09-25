@@ -17,7 +17,48 @@
             <li><a href="About.html">About</a>
         </ul>
     </nav>
-    <h1>Air-Type - Usage</h1>
-    <p>Usage coming soon...</p>
+    <div class="content">
+        <h1>Requirements</h1>
+        <div class="requirements">
+            <div class="requirements-text">
+                <p>The game is built in C++ using the CMake build system and the Raylib graphics library, making it portable across different platforms.</p>
+                <p>To play the game, you need C++ and CMake installed on your machine.</p>
+                <!-- <p>Link g++ (C++): <a href=""></a></p> -->
+                <p>Link CMake: <a href="https://cmake.org/download/">Download CMake</a></p>
+                <p>Link to clone the repository via ssh:</p>
+                <pre><code>git@github.com:Karumapathetic/air-type.git</code></pre>
+            </div>
+            <div class="requirements-image">
+                <img class="cmake_logo" src="../assets/cmake-icon.svg" alt="CMake logo">
+                <img class="cpp_logo" src="../assets/icon-c++.svg" alt="C++ logo">
+            </div>
+        </div>
+        <div class="launch">
+            <h1>Launch the game</h1>
+            <p>Once the dependencies are installed, you can launch the game whether you are on Windows or Linux !</p>
+            <div class="windows">
+                <h2>Windows</h2>
+                <p>On Windows, the game can be compile and run via the build.ps1 script in a PowerShell terminal.</p>
+                <p>To run both the client and the server you just have to do:</p>
+                <pre><code>./build.ps1</code></pre>
+                <p>It will compile everything for you to launch the client and the server.</p>
+                <p>You can launch the client with:</p>
+                <pre><code>./r-type_client.exe</code></pre>
+                <p>And the server with:</p>
+                <pre><code>./r-type_server.exe</code></pre>
+            </div>
+            <div class="linux">
+                <h2>Linux</h2>
+                <p>On Linux, the game can be compile and run via the build.sh script in a basic terminal.</p>
+                <p>To run both the client and the server you just have to do:</p>
+                <pre><code>./build.sh</code></pre>
+                <p>It will compile everything for you to launch the client and the server.</p>
+                <p>You can launch the client with:</p>
+                <pre><code>./r-type_client</code></pre>
+                <p>And the server with:</p>
+                <pre><code>./r-type_server</code></pre>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
