@@ -53,6 +53,8 @@ p {
 }
 
 .overview p {
+    padding-left: 0px;
+    margin-left: 0px;
     text-align: center;
 }
 
@@ -172,4 +174,43 @@ p {
 
 .technical .raylib .raylib-image img {
     scale: 0.7;
+}
+
+.protocols {
+    width: 100%;
+    padding: 80px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.changelogs {
+    width: 100%;
+    padding: 80px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.about {
+    width: 100%;
+    padding: 80px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.about p {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.about ul {
+    text-align: center;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.about ul li {
+    font-size: 18px;
+    padding-top: 10px;
+    display:block;
 }
