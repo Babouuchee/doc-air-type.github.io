@@ -47,6 +47,10 @@ p {
     margin: 10px;
 }
 
+li {
+    font-size: 18px;
+}
+
 .overview {
     width: 100%;
     padding: 10px;
@@ -210,7 +214,6 @@ p {
 }
 
 .about ul li {
-    font-size: 18px;
     padding-top: 10px;
     display:block;
 }
