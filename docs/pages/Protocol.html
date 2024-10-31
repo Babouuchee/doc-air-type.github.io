@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air-Type - Protocol</title>
+    <link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Overview</a></li>
+            <li><a href="Usage.html">Usage</a></li>
+            <li><a href="Informations.html">Informations</a></li>
+            <li><a href="Technical.html">Technical</a></li>
+            <li><a href="Protocol.html">Protocol</a></li>
+            <li><a href="Changelogs.html">Changelogs</a></li>
+            <li><a href="About.html">About</a>
+        </ul>
+    </nav>
+    <div class="protocol">
+        <h1>Protocol</h1>
+            <p>The server and the client communicate via UDP protocol.</p>
+            <p>We used a binary protocol to ensure the security of the packages we send, they must not be understandable by humans.</p>
+            <p>Each package (called request) are composed of :</p>
+            <ul>
+                <li>A header</li>
+                <li>A body</li>
+            </ul>
+            <p>A header is composed of an ID and the size of the body</p>
+            <p>A header have an ID that is an integer that can have one of these values :</p>
+            <ul>
+                <li><b>0</b> for ClientConnection</li>
+                <li><b>1</b> for ServerPing</li>
+                <li><b>2</b> for ServerRequest</li>
+                <li><b>3</b> for ServerAcceptance</li>
+                <li><b>4</b> for ServerDenial</li>
+                <li><b>5</b> for Acknowledge</li>
+                <li><b>6</b> for SetSpritePosition</li>
+                <li><b>7</b> for NotifyKilledSprite</li>
+                <li><b>8</b> for SetInput</li>
+                <li><b>9</b> for LaunchGame</li>
+            </ul>
+            <p>A body is composed of raw binary data with a size given by the header</p>
+            <p>To create the body, we put the data we want to send in a structure, and we convert the bytes of the structures in sequences of binary values</p>
+            <p>Here's the structures we use for each request :</p>
+            <ul>
+                <li><b>ClientConnection</b> : no body</li>
+                <li><b>ServerPing</b> : no body</li>
+                <li><b>ServerRequest</b> : no body</li>
+                <li><b>ServerAcceptance</b> : an 'int clientID' that indicated the client it's ID</li>
+                <li><b>ServerDenial</b> : no body</li>
+                <li><b>Acknowledge</b> : no body</li>
+                <li><b>SetSpritePosition</b> :
+                    <ul>
+                        <b>struct SpritePositions {</b><br>
+                            <div style="text-indent: 20px;">SpritesTypes entityType;</div>
+                            <div style="text-indent: 20px;">int spriteID;</div>
+                            <div style="text-indent: 20px;">float posX;</div>
+                            <div style="text-indent: 20px;">float posY;</div>
+                            <b>};</b>
+                        </ul>
+                </li>
+                <li><b>NotifyKilledSprite</b> :
+                    <ul>
+                        <b>struct KilledSprite {</b><br>
+                            <div style="text-indent: 20px;">int spriteID;</div>
+                            <div style="text-indent: 20px;">float posX;</div>
+                            <div style="text-indent: 20px;">float posY;</div>
+                        <b>};</b>
+                    </ul>
+                </li>
+                <li><b>SetInput</b> :
+                    <ul>
+                        <b>struct Input {</b><br>
+                            <div style="text-indent: 20px;">int clientID;</div>
+                            <div style="text-indent: 20px;">InputActions action;</div>
+                        <b>};</b>
+                    </ul>
+                </li>
+                <li><b>LaunchGame</b> : no body</li>
+            </ul>
+            <p>For SpritePositions and Input we use a special limited type. Here's the value they can take :</p>
+            <p>SpritesTypes :</p>
+            <ul>
+                <b>enum class SpritesTypes {</b><br>
+                    <div style="text-indent: 20px;">Player, (value 0)</div>
+                    <div style="text-indent: 20px;">PataPata, (value 1)</div>
+                    <div style="text-indent: 20px;">Win, (value 2)</div>
+                    <div style="text-indent: 20px;">Wick, (value 3)</div>
+                    <div style="text-indent: 20px;">Geld, (value 4)</div>
+                    <div style="text-indent: 20px;">Bug, (value 5)</div>
+                    <div style="text-indent: 20px;">Missile, (value 6)</div>
+                    <div style="text-indent: 20px;">Default, (value 7)</div>
+                <b>};</b>
+            </ul>
+            <p>InputActions :</p>
+            <ul>
+                <b>enum class InputActions {</b><br>
+                    <div style="text-indent: 20px;">UP, (value 0)</div>
+                    <div style="text-indent: 20px;">DOWN, (value 1)</div>
+                    <div style="text-indent: 20px;">LEFT, (value 2)</div>
+                    <div style="text-indent: 20px;">RIGHT, (value 3)</div>
+                    <div style="text-indent: 20px;">SHOOT, (value 4)</div>
+                <b>};</b>
+            </ul>
+        </div>
+</body>
+</html>
