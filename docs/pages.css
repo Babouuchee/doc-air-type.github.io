@@ -229,3 +229,8 @@ li {
     padding-top: 10px;
     display:block;
 }
+
+.ecs-image img {
+    width: 60%;
+    height: auto;
+}
