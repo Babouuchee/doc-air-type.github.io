@@ -31,8 +31,8 @@
             <p>A header have an ID that is an integer that can have one of these values :</p>
             <ul>
                 <li><b>0</b> for ClientConnection</li>
-                <li><b>1</b> for ServerPing</li>
-                <li><b>2</b> for ServerRequest</li>
+                <li><b>1</b> for ClientDisconnection</li>
+                <li><b>2</b> for ServerPing</li>
                 <li><b>3</b> for ServerAcceptance</li>
                 <li><b>4</b> for ServerDenial</li>
                 <li><b>5</b> for Acknowledge</li>
@@ -46,8 +46,8 @@
             <p>Here's the structures we use for each request :</p>
             <ul>
                 <li><b>ClientConnection</b> : no body</li>
+                <li><b>ClientDisconnection</b> : no body</li>
                 <li><b>ServerPing</b> : no body</li>
-                <li><b>ServerRequest</b> : no body</li>
                 <li><b>ServerAcceptance</b> : an 'int clientID' that indicated the client it's ID</li>
                 <li><b>ServerDenial</b> : no body</li>
                 <li><b>Acknowledge</b> : no body</li>
