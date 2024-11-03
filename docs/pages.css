@@ -234,3 +234,8 @@ li {
     width: 60%;
     height: auto;
 }
+
+.network-image img {
+    width: 65%;
+    height: auto;
+}
